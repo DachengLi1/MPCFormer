@@ -1,0 +1,2048 @@
+08/27/2022 21:48:09 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: True
+08/27/2022 21:48:09 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10/runs/Aug27_21-48-09_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+08/27/2022 21:48:10 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: True
+08/27/2022 21:48:10 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/runs/Aug27_21-48-09_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/.cache/huggingface/modules/datasets_modules/datasets/glue/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:48:10 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:48:10 - WARNING - datasets.builder - Reusing dataset glue (/home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 785.99it/s]
+[INFO|configuration_utils.py:657] 2022-08-27 21:48:10,285 >> loading configuration file /home/ubuntu/checkpoints/exp/CoLA/config.json
+[INFO|configuration_utils.py:708] 2022-08-27 21:48:10,286 >> Model config BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/CoLA",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "cola",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "unacceptable",
+    "1": "acceptable"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "acceptable": 1,
+    "unacceptable": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "softmax",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:1701] 2022-08-27 21:48:10,287 >> Didn't find file /home/ubuntu/checkpoints/exp/CoLA/added_tokens.json. We won't load it.
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,287 >> loading file /home/ubuntu/checkpoints/exp/CoLA/vocab.txt
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,287 >> loading file /home/ubuntu/checkpoints/exp/CoLA/tokenizer.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,287 >> loading file None
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,287 >> loading file /home/ubuntu/checkpoints/exp/CoLA/special_tokens_map.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,287 >> loading file /home/ubuntu/checkpoints/exp/CoLA/tokenizer_config.json
+[INFO|modeling_utils.py:2047] 2022-08-27 21:48:10,326 >> loading weights file /home/ubuntu/checkpoints/exp/CoLA/pytorch_model.bin
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/.cache/huggingface/modules/datasets_modules/datasets/glue/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:48:10 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:48:10 - WARNING - datasets.builder - Reusing dataset glue (/home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+08/27/2022 21:48:10 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 490.91it/s]
+[INFO|configuration_utils.py:657] 2022-08-27 21:48:10,483 >> loading configuration file /home/ubuntu/checkpoints/exp/RTE/config.json
+[INFO|configuration_utils.py:708] 2022-08-27 21:48:10,484 >> Model config BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "softmax",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:1701] 2022-08-27 21:48:10,485 >> Didn't find file /home/ubuntu/checkpoints/exp/RTE/added_tokens.json. We won't load it.
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,485 >> loading file /home/ubuntu/checkpoints/exp/RTE/vocab.txt
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,485 >> loading file /home/ubuntu/checkpoints/exp/RTE/tokenizer.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,485 >> loading file None
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,485 >> loading file /home/ubuntu/checkpoints/exp/RTE/special_tokens_map.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:48:10,485 >> loading file /home/ubuntu/checkpoints/exp/RTE/tokenizer_config.json
+[INFO|modeling_utils.py:2047] 2022-08-27 21:48:10,532 >> loading weights file /home/ubuntu/checkpoints/exp/RTE/pytorch_model.bin
+[INFO|modeling_bert.py:194] 2022-08-27 21:48:10,634 >> initializing embedding using nn.Embedding
+[INFO|modeling_bert.py:194] 2022-08-27 21:48:10,855 >> initializing embedding using nn.Embedding
+[INFO|modeling_utils.py:2417] 2022-08-27 21:48:11,921 >> All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+[INFO|modeling_utils.py:2426] 2022-08-27 21:48:11,922 >> All the weights of BertForSequenceClassification were initialized from the model checkpoint at /home/ubuntu/checkpoints/exp/CoLA.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+using model config: BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/CoLA",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "cola",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "unacceptable",
+    "1": "acceptable"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "acceptable": 1,
+    "unacceptable": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/CoLA",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "cola",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "unacceptable",
+    "1": "acceptable"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "acceptable": 1,
+    "unacceptable": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+model architecture: BertForSequenceClassification(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+  (classifier): Linear(in_features=768, out_features=2, bias=True)
+)[INFO|modeling_utils.py:2417] 2022-08-27 21:48:11,986 >> All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+[INFO|modeling_utils.py:2426] 2022-08-27 21:48:11,987 >> All the weights of BertForSequenceClassification were initialized from the model checkpoint at /home/ubuntu/checkpoints/exp/RTE.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+using model config: BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+model architecture: BertForSequenceClassification(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+  (classifier): Linear(in_features=768, out_features=2, bias=True)
+)
+08/27/2022 21:48:12 - WARNING - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7fe29494d488> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Running tokenizer on dataset:   0%|          | 0/9 [00:00<?, ?ba/s]
+08/27/2022 21:48:12 - WARNING - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f03050b5488> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Running tokenizer on dataset:   0%|          | 0/3 [00:00<?, ?ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-1c80317fa3b1799d.arrow
+Running tokenizer on dataset:  11%|█         | 1/9 [00:00<00:00,  8.68ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-1c80317fa3b1799d.arrow
+Running tokenizer on dataset:  33%|███▎      | 1/3 [00:00<00:00,  5.33ba/s]Running tokenizer on dataset:  22%|██▏       | 2/9 [00:00<00:01,  6.29ba/s]Running tokenizer on dataset:  44%|████▍     | 4/9 [00:00<00:00,  9.67ba/s]Running tokenizer on dataset:  67%|██████▋   | 2/3 [00:00<00:00,  3.95ba/s]Running tokenizer on dataset:  67%|██████▋   | 6/9 [00:00<00:00, 11.18ba/s]Running tokenizer on dataset: 100%|██████████| 3/3 [00:00<00:00,  5.29ba/s]08/27/2022 21:48:12 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f03050b1950> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/1 [00:00<?, ?ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-bdd640fb06671ad1.arrow
+Running tokenizer on dataset: 100%|██████████| 1/1 [00:00<00:00, 28.20ba/s]08/27/2022 21:48:12 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f03050b5840> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/3 [00:00<?, ?ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-3eb13b9046685257.arrow
+Running tokenizer on dataset:  89%|████████▉ | 8/9 [00:00<00:00, 11.83ba/s]Running tokenizer on dataset: 100%|██████████| 9/9 [00:00<00:00, 11.36ba/s]08/27/2022 21:48:12 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7fe29494d510> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/2 [00:00<?, ?ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-bdd640fb06671ad1.arrow
+Running tokenizer on dataset:  67%|██████▋   | 2/3 [00:00<00:00, 11.72ba/s]Running tokenizer on dataset: 100%|██████████| 2/2 [00:00<00:00, 22.59ba/s]08/27/2022 21:48:12 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7fe29494d488> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/2 [00:00<?, ?ba/s]08/27/2022 21:48:12 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-3eb13b9046685257.arrow
+Running tokenizer on dataset: 100%|██████████| 3/3 [00:00<00:00, 10.58ba/s]Running tokenizer on dataset: 100%|██████████| 2/2 [00:00<00:00, 26.48ba/s]128
+08/27/2022 21:48:18 - INFO - __main__ - Sample 914 of the training set: {'sentence1': "Because of Reagan's economic strategy, the federal budget deficit ballooned.", 'sentence2': "Reagan's economic strategy led to huge federal budget deficits.", 'label': 0, 'idx': 914, 'input_ids': [101, 2138, 1997, 11531, 1005, 1055, 3171, 5656, 1010, 1996, 2976, 5166, 15074, 13212, 2098, 1012, 102, 11531, 1005, 1055, 3171, 5656, 2419, 2000, 4121, 2976, 5166, 15074, 2015, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:48:18 - INFO - __main__ - Sample 3657 of the training set: {'sentence': 'John sounded in the park.', 'label': 0, 'idx': 3657, 'input_ids': [101, 2198, 5015, 1999, 1996, 2380, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:48:23 - INFO - __main__ - Sample 571 of the training set: {'sentence1': 'So far the British have preferred a policy of a voluntary approach to restricting advertising and high taxes on tobacco products.', 'sentence2': 'Sales have declined due to restrictions on advertising.', 'label': 1, 'idx': 571, 'input_ids': [101, 2061, 2521, 1996, 2329, 2031, 6871, 1037, 3343, 1997, 1037, 10758, 3921, 2000, 26996, 6475, 1998, 2152, 7773, 2006, 9098, 3688, 1012, 102, 4341, 2031, 6430, 2349, 2000, 9259, 2006, 6475, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:48:23 - INFO - __main__ - Sample 2286 of the training set: {'sentence': 'Clouds cleared from the sky.', 'label': 1, 'idx': 2286, 'input_ids': [101, 8044, 5985, 2013, 1996, 3712, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:48:28 - INFO - __main__ - Sample 419 of the training set: {'sentence1': 'Protesters, many from organized pro-government groups but including many ordinary citizens, carried anti-American banners and chanted slogans attacking U.N. Secretary-General Kofi Annan for his close alignment with U.S. policy.', 'sentence2': 'Protesters confiscated anti-American banners and chanted slogans attacking U.N. Secretary-General Kofi Annan for his close alignment with U.S. policy.', 'label': 1, 'idx': 419, 'input_ids': [101, 13337, 1010, 2116, 2013, 4114, 4013, 1011, 2231, 2967, 2021, 2164, 2116, 6623, 4480, 1010, 3344, 3424, 1011, 2137, 23562, 1998, 16883, 2098, 14558, 2015, 7866, 1057, 1012, 1050, 1012, 3187, 1011, 2236, 12849, 8873, 4698, 2078, 2005, 2010, 2485, 12139, 2007, 1057, 1012, 1055, 1012, 3343, 1012, 102, 13337, 17182, 3424, 1011, 2137, 23562, 1998, 16883, 2098, 14558, 2015, 7866, 1057, 1012, 1050, 1012, 3187, 1011, 2236, 12849, 8873, 4698, 2078, 2005, 2010, 2485, 12139, 2007, 1057, 1012, 1055, 1012, 3343, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:48:28 - INFO - __main__ - Sample 1679 of the training set: {'sentence': 'It is this hat that that he was wearing is certain.', 'label': 0, 'idx': 1679, 'input_ids': [101, 2009, 2003, 2023, 6045, 2008, 2008, 2002, 2001, 4147, 2003, 3056, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+
+using training arge: TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10/runs/Aug27_21-48-09_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=0,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+Traceback (most recent call last):
+  File "run_glue.py", line 645, in <module>
+    main()
+  File "run_glue.py", line 544, in main
+    data_collator=data_collator,
+  File "/home/ubuntu/transformers_private/src/transformers/trainer.py", line 423, in __init__
+    self._move_model_to_device(model, args.device)
+  File "/home/ubuntu/transformers_private/src/transformers/trainer.py", line 605, in _move_model_to_device
+    model = model.to(device)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 927, in to
+    return self._apply(convert)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 602, in _apply
+    param_applied = fn(param)
+  File "/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/modules/module.py", line 925, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Traceback (most recent call last):
+  File "baseline.py", line 78, in <module>
+    result = json.load(open(result_path))
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/baseline/CoLA/bert-base-uncased/HPO_S0/1e-06/256/10/eval_results.json'
+
+[INFO|trainer.py:506] 2022-08-27 21:48:33,927 >> Using amp half precision backend
+[INFO|trainer.py:628] 2022-08-27 21:48:33,930 >> The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: idx, sentence2, sentence1. If idx, sentence2, sentence1 are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/home/ubuntu/transformers_private/src/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+[INFO|trainer.py:1430] 2022-08-27 21:48:33,958 >> ***** Running training *****
+[INFO|trainer.py:1431] 2022-08-27 21:48:33,958 >>   Num examples = 2490
+[INFO|trainer.py:1432] 2022-08-27 21:48:33,958 >>   Num Epochs = 10
+[INFO|trainer.py:1433] 2022-08-27 21:48:33,958 >>   Instantaneous batch size per device = 128
+[INFO|trainer.py:1434] 2022-08-27 21:48:33,958 >>   Total train batch size (w. parallel, distributed & accumulation) = 256
+[INFO|trainer.py:1435] 2022-08-27 21:48:33,958 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1436] 2022-08-27 21:48:33,958 >>   Total optimization steps = 100
+using training arge: TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/runs/Aug27_21-48-09_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=0,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+  0%|          | 0/100 [00:00<?, ?it/s]/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  1%|          | 1/100 [00:05<08:42,  5.28s/it]  2%|▏         | 2/100 [00:05<04:01,  2.46s/it]  3%|▎         | 3/100 [00:06<02:31,  1.56s/it]  4%|▍         | 4/100 [00:06<01:49,  1.14s/it]  5%|▌         | 5/100 [00:07<01:26,  1.10it/s]  6%|▌         | 6/100 [00:07<01:11,  1.31it/s]  7%|▋         | 7/100 [00:08<01:03,  1.48it/s]  8%|▊         | 8/100 [00:08<00:56,  1.62it/s]  9%|▉         | 9/100 [00:09<00:52,  1.73it/s] 10%|█         | 10/100 [00:09<00:46,  1.92it/s] 11%|█         | 11/100 [00:10<00:45,  1.95it/s] 12%|█▏        | 12/100 [00:10<00:44,  1.98it/s] 13%|█▎        | 13/100 [00:11<00:43,  1.99it/s] 14%|█▍        | 14/100 [00:11<00:42,  2.01it/s] 15%|█▌        | 15/100 [00:12<00:42,  2.01it/s] 16%|█▌        | 16/100 [00:12<00:41,  2.02it/s] 17%|█▋        | 17/100 [00:13<00:41,  2.02it/s] 18%|█▊        | 18/100 [00:13<00:40,  2.02it/s] 19%|█▉        | 19/100 [00:14<00:39,  2.03it/s] 20%|██        | 20/100 [00:14<00:36,  2.17it/s] 21%|██        | 21/100 [00:14<00:37,  2.13it/s] 22%|██▏       | 22/100 [00:15<00:37,  2.10it/s] 23%|██▎       | 23/100 [00:15<00:37,  2.08it/s] 24%|██▍       | 24/100 [00:16<00:36,  2.07it/s] 25%|██▌       | 25/100 [00:16<00:36,  2.06it/s] 26%|██▌       | 26/100 [00:17<00:36,  2.05it/s] 27%|██▋       | 27/100 [00:17<00:35,  2.05it/s] 28%|██▊       | 28/100 [00:18<00:35,  2.05it/s] 29%|██▉       | 29/100 [00:18<00:34,  2.05it/s] 30%|███       | 30/100 [00:19<00:32,  2.19it/s] 31%|███       | 31/100 [00:19<00:32,  2.14it/s] 32%|███▏      | 32/100 [00:20<00:32,  2.11it/s] 33%|███▎      | 33/100 [00:20<00:32,  2.09it/s] 34%|███▍      | 34/100 [00:21<00:31,  2.08it/s] 35%|███▌      | 35/100 [00:21<00:33,  1.94it/s] 36%|███▌      | 36/100 [00:22<00:32,  1.97it/s] 37%|███▋      | 37/100 [00:22<00:31,  1.99it/s] 38%|███▊      | 38/100 [00:23<00:30,  2.00it/s] 39%|███▉      | 39/100 [00:23<00:30,  2.02it/s] 40%|████      | 40/100 [00:24<00:27,  2.16it/s] 41%|████      | 41/100 [00:24<00:27,  2.12it/s] 42%|████▏     | 42/100 [00:25<00:27,  2.10it/s] 43%|████▎     | 43/100 [00:25<00:27,  2.08it/s] 44%|████▍     | 44/100 [00:26<00:27,  2.07it/s] 45%|████▌     | 45/100 [00:26<00:26,  2.06it/s] 46%|████▌     | 46/100 [00:27<00:26,  2.06it/s] 47%|████▋     | 47/100 [00:27<00:25,  2.05it/s] 48%|████▊     | 48/100 [00:28<00:25,  2.05it/s] 49%|████▉     | 49/100 [00:28<00:24,  2.04it/s] 50%|█████     | 50/100 [00:28<00:22,  2.18it/s] 51%|█████     | 51/100 [00:29<00:22,  2.13it/s] 52%|█████▏    | 52/100 [00:29<00:22,  2.10it/s] 53%|█████▎    | 53/100 [00:30<00:22,  2.08it/s] 54%|█████▍    | 54/100 [00:30<00:22,  2.07it/s] 55%|█████▌    | 55/100 [00:31<00:21,  2.06it/s] 56%|█████▌    | 56/100 [00:31<00:21,  2.05it/s] 57%|█████▋    | 57/100 [00:32<00:21,  2.05it/s] 58%|█████▊    | 58/100 [00:32<00:20,  2.04it/s] 59%|█████▉    | 59/100 [00:33<00:20,  2.04it/s] 60%|██████    | 60/100 [00:33<00:18,  2.18it/s] 61%|██████    | 61/100 [00:34<00:18,  2.13it/s] 62%|██████▏   | 62/100 [00:34<00:18,  2.10it/s] 63%|██████▎   | 63/100 [00:35<00:17,  2.08it/s] 64%|██████▍   | 64/100 [00:35<00:17,  2.07it/s] 65%|██████▌   | 65/100 [00:36<00:16,  2.06it/s] 66%|██████▌   | 66/100 [00:36<00:16,  2.06it/s] 67%|██████▋   | 67/100 [00:37<00:16,  2.05it/s] 68%|██████▊   | 68/100 [00:37<00:15,  2.05it/s] 69%|██████▉   | 69/100 [00:38<00:15,  2.05it/s] 70%|███████   | 70/100 [00:38<00:13,  2.18it/s] 71%|███████   | 71/100 [00:39<00:13,  2.14it/s] 72%|███████▏  | 72/100 [00:39<00:13,  2.11it/s] 73%|███████▎  | 73/100 [00:39<00:12,  2.09it/s] 74%|███████▍  | 74/100 [00:40<00:12,  2.07it/s] 75%|███████▌  | 75/100 [00:40<00:12,  2.06it/s] 76%|███████▌  | 76/100 [00:41<00:11,  2.06it/s] 77%|███████▋  | 77/100 [00:41<00:11,  2.05it/s] 78%|███████▊  | 78/100 [00:42<00:10,  2.05it/s] 79%|███████▉  | 79/100 [00:42<00:10,  2.04it/s] 80%|████████  | 80/100 [00:43<00:09,  2.18it/s] 81%|████████  | 81/100 [00:43<00:08,  2.14it/s] 82%|████████▏ | 82/100 [00:44<00:08,  2.11it/s] 83%|████████▎ | 83/100 [00:44<00:08,  2.08it/s] 84%|████████▍ | 84/100 [00:45<00:07,  2.07it/s] 85%|████████▌ | 85/100 [00:45<00:07,  2.06it/s] 86%|████████▌ | 86/100 [00:46<00:06,  2.05it/s] 87%|████████▋ | 87/100 [00:46<00:06,  2.05it/s] 88%|████████▊ | 88/100 [00:47<00:05,  2.04it/s] 89%|████████▉ | 89/100 [00:47<00:05,  2.04it/s] 90%|█████████ | 90/100 [00:48<00:04,  2.18it/s] 91%|█████████ | 91/100 [00:48<00:04,  2.14it/s] 92%|█████████▏| 92/100 [00:49<00:03,  2.11it/s] 93%|█████████▎| 93/100 [00:49<00:03,  2.09it/s] 94%|█████████▍| 94/100 [00:50<00:02,  2.07it/s] 95%|█████████▌| 95/100 [00:50<00:02,  2.06it/s] 96%|█████████▌| 96/100 [00:51<00:01,  2.05it/s] 97%|█████████▋| 97/100 [00:51<00:01,  2.05it/s] 98%|█████████▊| 98/100 [00:52<00:00,  2.04it/s] 99%|█████████▉| 99/100 [00:52<00:00,  2.04it/s]100%|██████████| 100/100 [00:52<00:00,  2.18it/s][INFO|trainer.py:1679] 2022-08-27 21:49:26,896 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                 100%|██████████| 100/100 [00:52<00:00,  2.18it/s]100%|██████████| 100/100 [00:52<00:00,  1.89it/s]
+[INFO|trainer.py:2409] 2022-08-27 21:49:26,897 >> Saving model checkpoint to tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10
+[INFO|configuration_utils.py:446] 2022-08-27 21:49:26,904 >> Configuration saved in tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/config.json
+[INFO|modeling_utils.py:1602] 2022-08-27 21:49:34,445 >> Model weights saved in tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2108] 2022-08-27 21:49:34,451 >> tokenizer config file saved in tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2114] 2022-08-27 21:49:34,456 >> Special tokens file saved in tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/10/special_tokens_map.json
+{'train_runtime': 52.9381, 'train_samples_per_second': 470.361, 'train_steps_per_second': 1.889, 'train_loss': 0.7006800842285156, 'epoch': 10.0}
+***** train metrics *****
+  epoch                    =       10.0
+  train_loss               =     0.7007
+  train_runtime            = 0:00:52.93
+  train_samples            =       2490
+  train_samples_per_second =    470.361
+  train_steps_per_second   =      1.889
+08/27/2022 21:49:34 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:628] 2022-08-27 21:49:34,547 >> The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: idx, sentence2, sentence1. If idx, sentence2, sentence1 are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+[INFO|trainer.py:2659] 2022-08-27 21:49:34,550 >> ***** Running Evaluation *****
+[INFO|trainer.py:2661] 2022-08-27 21:49:34,550 >>   Num examples = 277
+[INFO|trainer.py:2664] 2022-08-27 21:49:34,550 >>   Batch size = 16
+  0%|          | 0/18 [00:00<?, ?it/s] 17%|█▋        | 3/18 [00:00<00:00, 28.80it/s] 33%|███▎      | 6/18 [00:00<00:00, 22.53it/s] 50%|█████     | 9/18 [00:00<00:00, 16.62it/s] 61%|██████    | 11/18 [00:00<00:00, 17.36it/s] 72%|███████▏  | 13/18 [00:00<00:00, 17.95it/s] 83%|████████▎ | 15/18 [00:00<00:00, 18.34it/s] 94%|█████████▍| 17/18 [00:00<00:00, 18.54it/s]08/27/2022 21:49:35 - INFO - datasets.metric - Removing /home/ubuntu/.cache/huggingface/metrics/glue/rte/default_experiment-1-0.arrow
+100%|██████████| 18/18 [00:00<00:00, 18.62it/s]
+***** eval metrics *****
+  epoch                   =       10.0
+  eval_accuracy           =     0.4729
+  eval_loss               =     0.6937
+  eval_runtime            = 0:00:01.02
+  eval_samples            =        277
+  eval_samples_per_second =    270.325
+  eval_steps_per_second   =     17.566
+08/27/2022 21:49:39 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: True
+08/27/2022 21:49:39 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30/runs/Aug27_21-49-39_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=30.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+08/27/2022 21:49:39 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/.cache/huggingface/modules/datasets_modules/datasets/glue/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:49:39 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+08/27/2022 21:49:39 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+08/27/2022 21:49:39 - WARNING - datasets.builder - Reusing dataset glue (/home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+08/27/2022 21:49:39 - INFO - datasets.info - Loading Dataset info from /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 572.76it/s]
+[INFO|configuration_utils.py:657] 2022-08-27 21:49:39,737 >> loading configuration file /home/ubuntu/checkpoints/exp/RTE/config.json
+[INFO|configuration_utils.py:708] 2022-08-27 21:49:39,738 >> Model config BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "softmax",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:1701] 2022-08-27 21:49:39,739 >> Didn't find file /home/ubuntu/checkpoints/exp/RTE/added_tokens.json. We won't load it.
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:49:39,739 >> loading file /home/ubuntu/checkpoints/exp/RTE/vocab.txt
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:49:39,739 >> loading file /home/ubuntu/checkpoints/exp/RTE/tokenizer.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:49:39,739 >> loading file None
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:49:39,739 >> loading file /home/ubuntu/checkpoints/exp/RTE/special_tokens_map.json
+[INFO|tokenization_utils_base.py:1779] 2022-08-27 21:49:39,740 >> loading file /home/ubuntu/checkpoints/exp/RTE/tokenizer_config.json
+[INFO|modeling_utils.py:2047] 2022-08-27 21:49:39,782 >> loading weights file /home/ubuntu/checkpoints/exp/RTE/pytorch_model.bin
+[INFO|modeling_bert.py:194] 2022-08-27 21:49:40,134 >> initializing embedding using nn.Embedding
+[INFO|modeling_utils.py:2417] 2022-08-27 21:49:41,307 >> All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+[INFO|modeling_utils.py:2426] 2022-08-27 21:49:41,307 >> All the weights of BertForSequenceClassification were initialized from the model checkpoint at /home/ubuntu/checkpoints/exp/RTE.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+using model config: BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+BertConfig {
+  "_name_or_path": "/home/ubuntu/checkpoints/exp/RTE",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "crypten": false,
+  "finetuning_task": "rte",
+  "gradient_checkpointing": false,
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "entailment",
+    "1": "not_entailment"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "entailment": 0,
+    "not_entailment": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "softmax_act": "2quad",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+model architecture: BertForSequenceClassification(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (2): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (3): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (4): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (5): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (6): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (7): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (8): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (9): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (10): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (11): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): QuadActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+  (classifier): Linear(in_features=768, out_features=2, bias=True)
+)
+08/27/2022 21:49:41 - WARNING - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f3341916488> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Running tokenizer on dataset:   0%|          | 0/3 [00:00<?, ?ba/s]08/27/2022 21:49:41 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-1c80317fa3b1799d.arrow
+Running tokenizer on dataset:  33%|███▎      | 1/3 [00:00<00:00,  7.97ba/s]Running tokenizer on dataset:  67%|██████▋   | 2/3 [00:00<00:00,  6.16ba/s]Running tokenizer on dataset: 100%|██████████| 3/3 [00:00<00:00,  8.32ba/s]08/27/2022 21:49:41 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f3341912950> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/1 [00:00<?, ?ba/s]08/27/2022 21:49:41 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-bdd640fb06671ad1.arrow
+Running tokenizer on dataset: 100%|██████████| 1/1 [00:00<00:00, 35.50ba/s]08/27/2022 21:49:41 - INFO - datasets.fingerprint - Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f3341916840> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead.
+
+Running tokenizer on dataset:   0%|          | 0/3 [00:00<?, ?ba/s]08/27/2022 21:49:41 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ubuntu/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-3eb13b9046685257.arrow
+Running tokenizer on dataset:  67%|██████▋   | 2/3 [00:00<00:00, 12.41ba/s]Running tokenizer on dataset: 100%|██████████| 3/3 [00:00<00:00, 11.17ba/s]128
+08/27/2022 21:49:47 - INFO - __main__ - Sample 914 of the training set: {'sentence1': "Because of Reagan's economic strategy, the federal budget deficit ballooned.", 'sentence2': "Reagan's economic strategy led to huge federal budget deficits.", 'label': 0, 'idx': 914, 'input_ids': [101, 2138, 1997, 11531, 1005, 1055, 3171, 5656, 1010, 1996, 2976, 5166, 15074, 13212, 2098, 1012, 102, 11531, 1005, 1055, 3171, 5656, 2419, 2000, 4121, 2976, 5166, 15074, 2015, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:49:52 - INFO - __main__ - Sample 571 of the training set: {'sentence1': 'So far the British have preferred a policy of a voluntary approach to restricting advertising and high taxes on tobacco products.', 'sentence2': 'Sales have declined due to restrictions on advertising.', 'label': 1, 'idx': 571, 'input_ids': [101, 2061, 2521, 1996, 2329, 2031, 6871, 1037, 3343, 1997, 1037, 10758, 3921, 2000, 26996, 6475, 1998, 2152, 7773, 2006, 9098, 3688, 1012, 102, 4341, 2031, 6430, 2349, 2000, 9259, 2006, 6475, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+128
+08/27/2022 21:49:57 - INFO - __main__ - Sample 419 of the training set: {'sentence1': 'Protesters, many from organized pro-government groups but including many ordinary citizens, carried anti-American banners and chanted slogans attacking U.N. Secretary-General Kofi Annan for his close alignment with U.S. policy.', 'sentence2': 'Protesters confiscated anti-American banners and chanted slogans attacking U.N. Secretary-General Kofi Annan for his close alignment with U.S. policy.', 'label': 1, 'idx': 419, 'input_ids': [101, 13337, 1010, 2116, 2013, 4114, 4013, 1011, 2231, 2967, 2021, 2164, 2116, 6623, 4480, 1010, 3344, 3424, 1011, 2137, 23562, 1998, 16883, 2098, 14558, 2015, 7866, 1057, 1012, 1050, 1012, 3187, 1011, 2236, 12849, 8873, 4698, 2078, 2005, 2010, 2485, 12139, 2007, 1057, 1012, 1055, 1012, 3343, 1012, 102, 13337, 17182, 3424, 1011, 2137, 23562, 1998, 16883, 2098, 14558, 2015, 7866, 1057, 1012, 1050, 1012, 3187, 1011, 2236, 12849, 8873, 4698, 2078, 2005, 2010, 2485, 12139, 2007, 1057, 1012, 1055, 1012, 3343, 1012, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}.
+
+[INFO|trainer.py:506] 2022-08-27 21:50:01,752 >> Using amp half precision backend
+[INFO|trainer.py:628] 2022-08-27 21:50:01,753 >> The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, sentence2, idx. If sentence1, sentence2, idx are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/home/ubuntu/transformers_private/src/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+[INFO|trainer.py:1430] 2022-08-27 21:50:01,766 >> ***** Running training *****
+[INFO|trainer.py:1431] 2022-08-27 21:50:01,766 >>   Num examples = 2490
+[INFO|trainer.py:1432] 2022-08-27 21:50:01,766 >>   Num Epochs = 30
+[INFO|trainer.py:1433] 2022-08-27 21:50:01,766 >>   Instantaneous batch size per device = 128
+[INFO|trainer.py:1434] 2022-08-27 21:50:01,766 >>   Total train batch size (w. parallel, distributed & accumulation) = 256
+[INFO|trainer.py:1435] 2022-08-27 21:50:01,766 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1436] 2022-08-27 21:50:01,766 >>   Total optimization steps = 300
+using training arge: TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_min_num_params=0,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30/runs/Aug27_21-49-39_ip-10-21-39-60,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=30.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=128,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=tmp/baseline/RTE/bert-base-uncased/HPO_S0/1e-06/256/30,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=0,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.2,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+  0%|          | 0/300 [00:00<?, ?it/s]/home/ubuntu/anaconda3/envs/transformers/lib/python3.7/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|          | 1/300 [00:05<25:38,  5.15s/it]  1%|          | 2/300 [00:05<11:58,  2.41s/it]  1%|          | 3/300 [00:06<07:34,  1.53s/it]  1%|▏         | 4/300 [00:06<05:31,  1.12s/it]  2%|▏         | 5/300 [00:07<04:22,  1.12it/s]  2%|▏         | 6/300 [00:07<03:41,  1.33it/s]  2%|▏         | 7/300 [00:08<03:15,  1.50it/s]  3%|▎         | 8/300 [00:08<02:57,  1.64it/s]  3%|▎         | 9/300 [00:09<02:46,  1.75it/s]  3%|▎         | 10/300 [00:09<02:29,  1.95it/s]  4%|▎         | 11/300 [00:09<02:26,  1.98it/s]  4%|▍         | 12/300 [00:10<02:24,  2.00it/s]  4%|▍         | 13/300 [00:10<02:22,  2.01it/s]  5%|▍         | 14/300 [00:11<02:21,  2.02it/s]  5%|▌         | 15/300 [00:11<02:20,  2.03it/s]  5%|▌         | 16/300 [00:12<02:19,  2.04it/s]  6%|▌         | 17/300 [00:12<02:18,  2.04it/s]  6%|▌         | 18/300 [00:13<02:17,  2.05it/s]  6%|▋         | 19/300 [00:13<02:17,  2.05it/s]  7%|▋         | 20/300 [00:14<02:07,  2.19it/s]  7%|▋         | 21/300 [00:14<02:10,  2.15it/s]  7%|▋         | 22/300 [00:15<02:11,  2.12it/s]  8%|▊         | 23/300 [00:15<02:12,  2.10it/s]  8%|▊         | 24/300 [00:16<02:12,  2.08it/s]  8%|▊         | 25/300 [00:16<02:12,  2.08it/s]  9%|▊         | 26/300 [00:17<02:12,  2.07it/s]  9%|▉         | 27/300 [00:17<02:12,  2.07it/s]  9%|▉         | 28/300 [00:18<02:11,  2.06it/s] 10%|▉         | 29/300 [00:18<02:11,  2.06it/s] 10%|█         | 30/300 [00:18<02:02,  2.20it/s] 10%|█         | 31/300 [00:19<02:04,  2.15it/s] 11%|█         | 32/300 [00:19<02:06,  2.12it/s] 11%|█         | 33/300 [00:20<02:07,  2.10it/s] 11%|█▏        | 34/300 [00:20<02:07,  2.09it/s] 12%|█▏        | 35/300 [00:21<02:14,  1.97it/s] 12%|█▏        | 36/300 [00:21<02:12,  2.00it/s] 12%|█▏        | 37/300 [00:22<02:10,  2.01it/s] 13%|█▎        | 38/300 [00:22<02:09,  2.02it/s] 13%|█▎        | 39/300 [00:23<02:08,  2.03it/s] 13%|█▎        | 40/300 [00:23<01:59,  2.18it/s] 14%|█▎        | 41/300 [00:24<02:01,  2.14it/s] 14%|█▍        | 42/300 [00:24<02:02,  2.11it/s] 14%|█▍        | 43/300 [00:25<02:02,  2.09it/s] 15%|█▍        | 44/300 [00:25<02:03,  2.08it/s] 15%|█▌        | 45/300 [00:26<02:03,  2.07it/s] 15%|█▌        | 46/300 [00:26<02:03,  2.06it/s] 16%|█▌        | 47/300 [00:27<02:03,  2.06it/s] 16%|█▌        | 48/300 [00:27<02:02,  2.05it/s] 16%|█▋        | 49/300 [00:28<02:02,  2.05it/s] 17%|█▋        | 50/300 [00:28<01:54,  2.19it/s] 17%|█▋        | 51/300 [00:29<01:55,  2.15it/s] 17%|█▋        | 52/300 [00:29<01:57,  2.12it/s] 18%|█▊        | 53/300 [00:30<01:57,  2.10it/s] 18%|█▊        | 54/300 [00:30<01:57,  2.09it/s] 18%|█▊        | 55/300 [00:31<01:57,  2.08it/s] 19%|█▊        | 56/300 [00:31<01:57,  2.07it/s] 19%|█▉        | 57/300 [00:32<01:57,  2.07it/s] 19%|█▉        | 58/300 [00:32<01:57,  2.06it/s] 20%|█▉        | 59/300 [00:32<01:56,  2.06it/s] 20%|██        | 60/300 [00:33<01:49,  2.20it/s] 20%|██        | 61/300 [00:33<01:50,  2.15it/s] 21%|██        | 62/300 [00:34<01:52,  2.12it/s] 21%|██        | 63/300 [00:34<01:52,  2.10it/s] 21%|██▏       | 64/300 [00:35<01:52,  2.09it/s] 22%|██▏       | 65/300 [00:35<01:53,  2.08it/s] 22%|██▏       | 66/300 [00:36<01:52,  2.07it/s] 22%|██▏       | 67/300 [00:36<01:52,  2.07it/s] 23%|██▎       | 68/300 [00:37<01:52,  2.06it/s] 23%|██▎       | 69/300 [00:37<01:52,  2.06it/s] 23%|██▎       | 70/300 [00:38<01:44,  2.20it/s] 24%|██▎       | 71/300 [00:38<01:46,  2.15it/s] 24%|██▍       | 72/300 [00:39<01:47,  2.12it/s] 24%|██▍       | 73/300 [00:39<01:48,  2.10it/s] 25%|██▍       | 74/300 [00:40<01:48,  2.09it/s] 25%|██▌       | 75/300 [00:40<01:48,  2.08it/s] 25%|██▌       | 76/300 [00:41<01:48,  2.07it/s] 26%|██▌       | 77/300 [00:41<01:48,  2.06it/s] 26%|██▌       | 78/300 [00:42<01:47,  2.06it/s] 26%|██▋       | 79/300 [00:42<01:47,  2.06it/s] 27%|██▋       | 80/300 [00:42<01:40,  2.20it/s] 27%|██▋       | 81/300 [00:43<01:41,  2.15it/s] 27%|██▋       | 82/300 [00:43<01:42,  2.12it/s] 28%|██▊       | 83/300 [00:44<01:43,  2.10it/s] 28%|██▊       | 84/300 [00:44<01:43,  2.09it/s] 28%|██▊       | 85/300 [00:45<01:43,  2.07it/s] 29%|██▊       | 86/300 [00:45<01:43,  2.07it/s] 29%|██▉       | 87/300 [00:46<01:43,  2.06it/s] 29%|██▉       | 88/300 [00:46<01:42,  2.06it/s] 30%|██▉       | 89/300 [00:47<01:42,  2.06it/s] 30%|███       | 90/300 [00:47<01:35,  2.20it/s] 30%|███       | 91/300 [00:48<01:37,  2.15it/s] 31%|███       | 92/300 [00:48<01:38,  2.12it/s] 31%|███       | 93/300 [00:49<01:38,  2.10it/s] 31%|███▏      | 94/300 [00:49<01:38,  2.09it/s] 32%|███▏      | 95/300 [00:50<01:38,  2.08it/s] 32%|███▏      | 96/300 [00:50<01:38,  2.07it/s] 32%|███▏      | 97/300 [00:51<01:38,  2.06it/s] 33%|███▎      | 98/300 [00:51<01:38,  2.06it/s] 33%|███▎      | 99/300 [00:52<01:37,  2.06it/s] 33%|███▎      | 100/300 [00:52<01:30,  2.20it/s] 34%|███▎      | 101/300 [00:52<01:32,  2.15it/s] 34%|███▍      | 102/300 [00:53<01:33,  2.12it/s] 34%|███▍      | 103/300 [00:53<01:33,  2.10it/s] 35%|███▍      | 104/300 [00:54<01:33,  2.09it/s] 35%|███▌      | 105/300 [00:54<01:33,  2.08it/s] 35%|███▌      | 106/300 [00:55<01:38,  1.98it/s] 36%|███▌      | 107/300 [00:55<01:36,  2.00it/s] 36%|███▌      | 108/300 [00:56<01:35,  2.01it/s] 36%|███▋      | 109/300 [00:56<01:34,  2.03it/s] 37%|███▋      | 110/300 [00:57<01:27,  2.17it/s] 37%|███▋      | 111/300 [00:57<01:28,  2.13it/s] 37%|███▋      | 112/300 [00:58<01:29,  2.11it/s] 38%|███▊      | 113/300 [00:58<01:29,  2.09it/s] 38%|███▊      | 114/300 [00:59<01:29,  2.08it/s] 38%|███▊      | 115/300 [00:59<01:29,  2.07it/s] 39%|███▊      | 116/300 [01:00<01:29,  2.06it/s] 39%|███▉      | 117/300 [01:00<01:28,  2.06it/s] 39%|███▉      | 118/300 [01:01<01:28,  2.06it/s] 40%|███▉      | 119/300 [01:01<01:28,  2.06it/s] 40%|████      | 120/300 [01:02<01:21,  2.20it/s] 40%|████      | 121/300 [01:02<01:23,  2.15it/s] 41%|████      | 122/300 [01:03<01:23,  2.12it/s] 41%|████      | 123/300 [01:03<01:24,  2.10it/s] 41%|████▏     | 124/300 [01:03<01:24,  2.09it/s] 42%|████▏     | 125/300 [01:04<01:24,  2.08it/s]

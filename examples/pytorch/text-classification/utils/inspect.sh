@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python inspect_weights.py  --model_name_or_path bert-base-uncased   --task_name $TASK_NAME --do_eval --max_seq_length 512 --output_dir ./tmp/$TASK_NAME/relu --overwrite_output_dir
