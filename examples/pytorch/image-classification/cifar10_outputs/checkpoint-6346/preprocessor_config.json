@@ -1,0 +1,17 @@
+{
+  "do_normalize": true,
+  "do_resize": true,
+  "feature_extractor_type": "ViTFeatureExtractor",
+  "image_mean": [
+    0.4914,
+    0.4822,
+    0.4465
+  ],
+  "image_std": [
+    0.247,
+    0.2435,
+    0.2616
+  ],
+  "resample": 2,
+  "size": 224
+}

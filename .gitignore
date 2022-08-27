@@ -2,24 +2,9 @@
 
 # tmp
 **tmp/
-**checkpoint**
 **data/
 **wandb/
-**checkpoint/
-**checkpoints/
-**datasets/
 **results/
-**bin
-**pt
-**pth
-**bert-base-uncased/
-**bert-base-uncased**/
-**glove.840B.300d.txt
-**TinyBERT_General_6L_768D/ 
-**TinyBERT_General_6L_768D**/ 
-**TinyBERT_General_4L_312D/ 
-**TinyBERT_General_4L_312D**/ 
-**checkpoint-36500**
 **glue_data/
 
 # Byte-compiled / optimized / DLL files
