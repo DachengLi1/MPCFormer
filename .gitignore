@@ -2,7 +2,6 @@
 
 # tmp
 **tmp/
-**data/
 **wandb/
 **results/
 **glue_data/
