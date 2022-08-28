@@ -26,7 +26,7 @@ metric_map = {
     'QNLI': 'eval_accuracy',
     'SST2': 'eval_accuracy',
     'RTE': 'eval_accuracy',
-    'COLA': 'eval_matthews_correlation',
+    'CoLA': 'eval_matthews_correlation',
     'STSB': 'eval_combined_score',
     'MRPC': 'eval_f1',
     'imdb': 'eval_accuracy',
