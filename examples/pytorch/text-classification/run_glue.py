@@ -531,7 +531,7 @@ def main():
     else:
         data_collator = None
 
-    training_args.save_total_limit = 0
+    training_args.save_total_limit = 1
     print(f"using training arge: {training_args}")
     # Initialize our Trainer
     trainer = Trainer(
