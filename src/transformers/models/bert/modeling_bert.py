@@ -469,8 +469,6 @@ class BertIntermediate(nn.Module):
 
     def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
         hidden_states = self.dense(hidden_states)
-        #print(self.dense.weight[:2])
-        #print(self.intermediate_act_fn)
         hidden_states = self.intermediate_act_fn(hidden_states)
         return hidden_states
 
@@ -1528,14 +1526,6 @@ class BertForNextSentencePrediction(BertPreTrainedModel):
         )
 
 
-class BertForSequenceClassificationWrapper(BertPreTrainedModel):
-    def __init__(self, config):
-        super().__init__(config)
-        self.model = BertForSequenceClassification(config)
-    
-    def forward(self, inputs):
-        return self.model.forward(**inputs)
-
 @add_start_docstrings(
     """
     Bert Model transformer with a sequence classification/regression head on top (a linear layer on top of the pooled
@@ -1603,9 +1593,6 @@ class BertForSequenceClassification(BertPreTrainedModel):
         pooled_output = outputs[1]
         pooled_output = self.dropout(pooled_output)
         logits = self.classifier(pooled_output)
-        #print(logits, pooled_output)
-        #assert False
-        #print(self.classifier.weight)
         loss = None
         if labels is not None:
             if self.config.problem_type is None:
@@ -1627,7 +1614,6 @@ class BertForSequenceClassification(BertPreTrainedModel):
                     # Crypten may need onnx to export model. Has some conflict with dynamic slice version.
                     # Need to implement cross entropy loss ourselves.
                     def custom_ce(logits, labels):
-                        #print(logits.shape, labels.shape)
                         loss = -torch.sum(torch.nn.functional.one_hot(labels, logits.shape[-1])*torch.log(logits))
                         return loss/float(logits.shape[0])
                     loss_fct = custom_ce
