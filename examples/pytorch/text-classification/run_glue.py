@@ -580,8 +580,10 @@ def main():
             combined = {}
 
         for eval_dataset, task in zip(eval_datasets, tasks):
-            metrics = trainer.evaluate(eval_dataset=eval_dataset)
-
+            try:
+                metrics = trainer.evaluate(eval_dataset=eval_dataset)
+            except:
+                metrics = 0
             max_eval_samples = (
                 data_args.max_eval_samples if data_args.max_eval_samples is not None else len(eval_dataset)
             )
