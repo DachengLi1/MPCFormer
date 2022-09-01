@@ -381,7 +381,10 @@ def main():
     print(f"using model config: {config}")
 
     if data_args.scratch:
-        model = BertForSequenceClassification(config)
+        model = AutoModelForSequenceClassification.from_config(
+                #model_args.model_name_or_path,
+                config=config
+        )
     else:
         model = AutoModelForSequenceClassification.from_pretrained(
                 model_args.model_name_or_path,
