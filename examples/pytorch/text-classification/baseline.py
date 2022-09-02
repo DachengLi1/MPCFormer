@@ -73,7 +73,8 @@ for lr in lr_list:
                   --task_name {task_name} --fp16 --do_train --do_eval --max_seq_length {max_seq_length} \
                   --warmup_ratio 0.2 --per_device_train_batch_size {str(bs//num_devices)} --learning_rate {str(lr)} \
                   --num_train_epochs {epoch} --act {hidden_act} --softmax_act {softmax_act} --output_dir {output_dir} --overwrite_output_dir"
-
+            if baseline_type == "S0":
+                cmd += " --scratch"
             subprocess.run(cmd, shell=True)
             result = json.load(open(result_path))
             metric = float(result[metric_map[task_name]])
