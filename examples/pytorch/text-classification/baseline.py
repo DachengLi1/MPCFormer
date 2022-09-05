@@ -57,9 +57,12 @@ with open(log_path, "a") as f:
     f.write("new run \n")
 
 num_devices = torch.cuda.device_count()
-
+print(f"num devices: {num_devices}")
 lr_list = [1e-6, 5e-6, 1e-5, 1e-4]
-bs_list = [256, 64]
+if task_name == "imdb":
+    bs_list = [32]
+else:
+    bs_list = [256, 64]
 epoch_list = [10, 30, 100]
 best = None
 best_metric = 0
@@ -70,11 +73,15 @@ for lr in lr_list:
             output_dir = os.path.join(base_dir, f"HPO_{baseline_type}" ,str(lr), str(bs), str(epoch))
             result_path = os.path.join(output_dir, "eval_results.json")
             cmd = f"python run_glue.py --model_name_or_path {model_path} \
-                  --task_name {task_name} --fp16 --do_train --do_eval --max_seq_length {max_seq_length} \
+                   --fp16 --do_train --do_eval --max_seq_length {max_seq_length} \
                   --warmup_ratio 0.2 --per_device_train_batch_size {str(bs//num_devices)} --learning_rate {str(lr)} \
                   --num_train_epochs {epoch} --act {hidden_act} --softmax_act {softmax_act} --output_dir {output_dir} --overwrite_output_dir"
             if baseline_type == "S0":
                 cmd += " --scratch"
+            if task_name == "imdb":
+                cmd += " --dataset_name imdb"
+            else:
+                cmd += " --task_name {task_name}"
             subprocess.run(cmd, shell=True)
             result = json.load(open(result_path))
             metric = float(result[metric_map[task_name]])
