@@ -49,7 +49,7 @@ if task_name == "imdb":
 else:
     max_seq_length = 128
 
-base_dir = os.path.join("tmp", exp_name, task_name, model_type)
+base_dir = os.path.join("tmp", exp_name, task_name, model_type, hidden_act, softmax_act)
 os.makedirs(base_dir, exist_ok=True)
 
 log_path = os.path.join(base_dir, "log.txt")
