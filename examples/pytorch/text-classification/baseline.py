@@ -81,7 +81,7 @@ for lr in lr_list:
             if task_name == "imdb":
                 cmd += " --dataset_name imdb"
             else:
-                cmd += " --task_name {task_name}"
+                cmd += f" --task_name {task_name}"
             subprocess.run(cmd, shell=True)
             result = json.load(open(result_path))
             metric = float(result[metric_map[task_name]])
