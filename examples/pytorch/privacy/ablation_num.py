@@ -6,7 +6,7 @@ import itertools
 import argparse
 import torch
 
-exp_name = "distill"
+exp_name = "ablation"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--task_name', type=str)
@@ -17,12 +17,14 @@ parser.add_argument('--lr_pred', type=float, default=1e-5)
 parser.add_argument('--bs', type=int, default=32)
 parser.add_argument('--hidden_act', type=str)
 parser.add_argument('--softmax_act', type=str)
+parser.add_argument('--ablation_num', type=int)
 
 args = parser.parse_args()
 task_name = args.task_name
 lr_hidden = args.lr_hidden
 lr_pred = args.lr_pred
 bs = args.bs
+ablation_num = args.ablation_num
 
 hidden_act = args.hidden_act
 softmax_act = args.softmax_act
@@ -32,7 +34,7 @@ student_dir = args.student_dir
 
 config = json.load(open(os.path.join(teacher_dir, "config.json")))
 model_type = config["_name_or_path"]
-base_dir = os.path.join("tmp", exp_name, task_name, f"{hidden_act}_{softmax_act}", model_type)
+base_dir = os.path.join("tmp", exp_name, task_name, f"{hidden_act}_{softmax_act}_{ablation_num}", model_type)
 
 os.makedirs(base_dir, exist_ok=True)
 log_path = os.path.join(base_dir, "log.txt")
@@ -61,7 +63,7 @@ def distill():
         outfile.write(json_object)
             
     cmd = f"python task_distill.py --teacher_model {teacher_dir} \
-               --student_model {student_dir} \
+               --student_model {student_dir} --ablation_num {ablation_num}\
                --data_dir {data_dir} --task_name {task_name} --output_dir {output_dir} \
                --max_seq_length 128 --train_batch_size {bs} --learning_rate {lr_hidden}\
                --do_lower_case --log_path {log_path} --hidden_act {hidden_act} --softmax_act {softmax_act}"

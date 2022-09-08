@@ -787,6 +787,9 @@ def main():
                         type=str)
     parser.add_argument('--softmax_act',
                         type=str)
+    parser.add_argument('--ablation_num',
+                        type=int,
+                        default=-1)
 
 
 
@@ -890,6 +893,13 @@ def main():
             train_examples = processor.get_train_examples(args.data_dir)
         else:
             train_examples = processor.get_aug_examples(args.data_dir)
+        if args.ablation_num != -1:
+            original_num = len(train_examples)
+            indices = np.random.choice(list(range(len(train_examples))), size=args.ablation_num, replace=False)
+            train_examples = [a for a in train_examples if train_examples.index(a) in indices]
+            args.num_train_epochs = int(original_num * args.num_train_epochs/ args.ablation_num)
+            print(f"training with {args.num_train_epochs} epochs")
+            print(f"number of training examples: {len(train_examples)}")
         if args.gradient_accumulation_steps < 1:
             raise ValueError("Invalid gradient_accumulation_steps parameter: {}, should be >= 1".format(
                 args.gradient_accumulation_steps))
