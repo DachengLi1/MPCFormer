@@ -619,10 +619,12 @@ class BertPreTrainedModel(nn.Module):
             module.bias.data.zero_()
 
     @classmethod
-    def from_scratch(cls, pretrained_model_name_or_path, *inputs, **kwargs):
+    def from_scratch(cls, pretrained_model_name_or_path, hidden_act, softmax_act, *inputs, **kwargs):
         resolved_config_file = os.path.join(
             pretrained_model_name_or_path, CONFIG_NAME)
         config = BertConfig.from_json_file(resolved_config_file)
+        config.hidden_act = hidden_act
+        config.softmax_act = softmax_act
 
         logger.info("Model config {}".format(config))
         model = cls(config, *inputs, **kwargs)

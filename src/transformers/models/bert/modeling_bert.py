@@ -220,7 +220,10 @@ class BertEmbeddings(nn.Module):
         past_key_values_length: int = 0,
     ) -> torch.Tensor:
         #print(self.word_embeddings.weight[:10])
-        #print(input_ids)
+        #print(input_ids.shape)
+        #assert False
+        #import time
+        #time.sleep(100)
         if input_ids is not None:
             input_shape = input_ids.size()
         else:

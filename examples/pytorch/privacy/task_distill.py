@@ -790,6 +790,8 @@ def main():
     parser.add_argument('--ablation_num',
                         type=int,
                         default=-1)
+    parser.add_argument('--ablation_init',
+                        action="store_true")
 
 
 
@@ -830,7 +832,7 @@ def main():
         "mnli": {"num_train_epochs": 5, "max_seq_length": 128},
         "mrpc": {"num_train_epochs": 20, "max_seq_length": 128},
         "sst2": {"num_train_epochs": 10, "max_seq_length": 128},
-        "stsb": {"num_train_epochs": 50, "max_seq_length": 128},
+        "stsb": {"num_train_epochs": 100, "max_seq_length": 128},
         "qqp": {"num_train_epochs": 5, "max_seq_length": 128},
         "qnli": {"num_train_epochs": 10, "max_seq_length": 128},
         "rte": {"num_train_epochs": 50, "max_seq_length": 128},
@@ -873,6 +875,9 @@ def main():
     if not args.pred_distill and not args.do_eval:
         if task_name in default_params:
             args.num_train_epochs = default_params[task_name]["num_train_epochs"]
+            if args.ablation_init:
+                args.num_train_epochs *= 10
+                print(f"training with {args.num_train_epochs} epochs")
     #print(default_params, args.num_train_epochs)
     #assert False
     if task_name not in processors:
@@ -893,8 +898,9 @@ def main():
             train_examples = processor.get_train_examples(args.data_dir)
         else:
             train_examples = processor.get_aug_examples(args.data_dir)
-        if args.ablation_num != -1:
+        if args.ablation_ratio != -1:
             original_num = len(train_examples)
+            args.ablation_num = int(original_num) * args.ablation_ratio
             indices = np.random.choice(list(range(len(train_examples))), size=args.ablation_num, replace=False)
             train_examples = [a for a in train_examples if train_examples.index(a) in indices]
             args.num_train_epochs = int(original_num * args.num_train_epochs/ args.ablation_num)
@@ -937,7 +943,12 @@ def main():
     if "roberta" in args.student_model:
         student_model = TinyRobertaForSequenceClassification.from_pretrained(args.student_model, num_labels=num_labels, fit_size=teacher_model.config.hidden_size)
     else:
-        student_model = TinyBertForSequenceClassification.from_pretrained(args.student_model, hidden_act=args.hidden_act, softmax_act=args.softmax_act, num_labels=num_labels, fit_size=teacher_model.config.hidden_size)
+        if args.ablation_init:
+            student_model = TinyBertForSequenceClassification.from_scratch(args.student_model, hidden_act=args.hidden_act, softmax_act=args.softmax_act, num_labels=num_labels, fit_size=teacher_model.config.hidden_size)
+            logger.info("student load from scratch")
+        else:
+            student_model = TinyBertForSequenceClassification.from_pretrained(args.student_model, hidden_act=args.hidden_act, softmax_act=args.softmax_act, num_labels=num_labels, fit_size=teacher_model.config.hidden_size)
+            logger.info("student load from pretrained")
 
     student_model.to(device)
     if args.do_eval:
