@@ -787,8 +787,8 @@ def main():
                         type=str)
     parser.add_argument('--softmax_act',
                         type=str)
-    parser.add_argument('--ablation_num',
-                        type=int,
+    parser.add_argument('--ablation_ratio',
+                        type=float,
                         default=-1)
     parser.add_argument('--ablation_init',
                         action="store_true")
@@ -900,7 +900,7 @@ def main():
             train_examples = processor.get_aug_examples(args.data_dir)
         if args.ablation_ratio != -1:
             original_num = len(train_examples)
-            args.ablation_num = int(original_num) * args.ablation_ratio
+            args.ablation_num = int(original_num * args.ablation_ratio)
             indices = np.random.choice(list(range(len(train_examples))), size=args.ablation_num, replace=False)
             train_examples = [a for a in train_examples if train_examples.index(a) in indices]
             args.num_train_epochs = int(original_num * args.num_train_epochs/ args.ablation_num)
