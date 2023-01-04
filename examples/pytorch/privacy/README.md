@@ -1,5 +1,11 @@
 Main training scripts of MPCFormer. It uses a minimized implementation of Transformer in this directory (i.e. changes in the outmost directory will not affect the behavior here). To reproduce results:
 
+(0) Install the outmost directory in editor mode:
+    
+    git clone https://github.com/MccRee177/transformers_private
+    cd transformer_private
+    pip install -e .
+
 (1) Download Glue data using download_glue_data.py
 
 (2) train a teacher model (pretraining + fine-tuning on downstream tasks) and put in ~/checkpoints/exp/[task_name]. We provide our script in ../text-classification/train_teacher.py.
