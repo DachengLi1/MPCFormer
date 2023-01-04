@@ -111,8 +111,3 @@ if model_name == "bert-large-uncased":
     HPO_teacher_bert_large()
 elif model_name == "roberta-base":
     HPO_teacher_roberta()
-
-# hold GPU
-a = torch.randn(50,50).cuda()
-while True:
-    a ** 2
