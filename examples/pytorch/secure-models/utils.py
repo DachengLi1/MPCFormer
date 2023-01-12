@@ -1,3 +1,4 @@
+import math
 import torch
 
 import crypten
@@ -60,6 +61,25 @@ class softmax_2QUAD(cnn.Module):
         quad = x#self.norm(x)
         quad = (quad*quad + quad + 1)
         return quad / quad.sum(dim=self.dim, keepdims=True)
+
+class activation_newGeLU(cnn.Module):
+    """
+    Implementation of the GELU activation function currently in Google BERT repo (identical to OpenAI GPT).
+    Reference: Gaussian Error Linear Units (GELU) paper: https://arxiv.org/abs/1606.08415
+    """
+    def __init__(self):
+        super().__init__()
+        self.half = torch.tensor([0.5]).item()
+        self.one = torch.tensor([1.0]).item()
+        self.three = torch.tensor([3.0]).item()
+        self.constant = torch.tensor([0.044715]).item()
+        self.pi_const = torch.tensor([math.sqrt(2/math.pi)]).item()
+        self.pow = cnn.Pow()
+        self.tanh = cnn.Hardtanh()
+
+    def forward(self, x):
+        return self.half * x * (self.one + self.tanh(self.pi_const * (x + self.constant * self.pow((x, self.three)))))
+
 
 class activation_quad(cnn.Module):
     def __init__(self):

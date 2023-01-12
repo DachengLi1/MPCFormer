@@ -13,7 +13,7 @@ import crypten.communicator as comm
 from crypten.config import cfg
 from utils import encrypt_tensor, encrypt_model
 
-from models import Bert, BertEmbeddings
+from gpt import gpt
 
 # Inference arguments
 class config():
@@ -22,13 +22,13 @@ class config():
        self.num_hidden_layers = 12
        self.hidden_size = 768
        self.intermediate_size = 3072
-       self.sequence_length = 512
-       self.max_position_embeddings = 512
-       self.hidden_act = "quad"
-       self.softmax_act = "softmax_2RELU"
+       self.sequence_length = 16
+       self.max_position_embeddings = 1024
+       self.hidden_act = "newGeLU"
+       self.softmax_act = "softmax"
        self.layer_norm_eps = 1e-12
        self.num_attention_heads = 12
-       self.vocab_size = 28996
+       self.vocab_size = 50257
        self.hidden_dropout_prob = 0.1
        self.attention_probs_dropout_prob = 0.1
 
@@ -52,18 +52,18 @@ input_ids = F.one_hot(torch.randint(low=0, high=config.vocab_size, size=(config.
 
 timing = defaultdict(float)
 
-m = Bert(config, timing)
-model = encrypt_model(m, Bert, (config, timing), input_ids).eval()
+m = gpt(config, timing)
+model = encrypt_model(m, gpt, (config, timing), input_ids).eval()
 
 # encrpy inputs
 input_ids = encrypt_tensor(input_ids)
 
-for i in range(10):
+for i in range(1):
     m.reset_timing()
     time_s = time.time()
     # run a forward pass
     with crypten.no_grad():
-        model(input_ids)
+        model.generate(input_ids, 32)
 
     time_e = time.time()
     timing["total_time"] = (time_e - time_s)
