@@ -58,8 +58,8 @@ class softmax_2QUAD(cnn.Module):
     
     def forward(self, x):
         a, b, c, d = x.size()
-        quad = x#self.norm(x)
-        quad = (quad*quad + quad + 1)
+        #quad = x#self.norm(x)
+        quad = (x+5) * (x+5)
         return quad / quad.sum(dim=self.dim, keepdims=True)
 
 class activation_newGeLU(cnn.Module):

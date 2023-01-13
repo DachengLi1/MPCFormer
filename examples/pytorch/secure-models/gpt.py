@@ -9,7 +9,7 @@ import crypten.nn as cnn
 import crypten.communicator as comm
 from crypten.common.functions import maximum
 
-from utils import softmax_2RELU, activation_quad, activation_newGeLU, encrypt_tensor
+from utils import softmax_2RELU, softmax_2QUAD, activation_quad, activation_newGeLU, encrypt_tensor
 
 class gpt(cnn.Module):
     def __init__(self, config, timing):
@@ -47,6 +47,9 @@ class gpt(cnn.Module):
         self.timing["LinearTime"] += (t1-t0)
         self.timing["LinearCommTime"] += (comm1["time"] - comm0["time"])
         self.timing["LinearCommByte"] += (comm1["bytes"] - comm0["bytes"])
+        self.timing["lmHeadTime"] += (t1-t0)
+        self.timing["lmHeadCommTime"] += (comm1["time"] - comm0["time"])
+        self.timing["lmHeadCommByte"] += (comm1["bytes"] - comm0["bytes"])
         return output#, past
 
     def generate(self, idx, max_new_tokens, temperature=1.0, do_sample=False, top_k=None):
@@ -64,13 +67,13 @@ class gpt(cnn.Module):
             # if the sequence context is growing too long we must crop it at block_size
             idx_cond = idx if idx.size(1) <= self.config.max_position_embeddings else idx[:, -self.config.max_position_embeddings:,:]
             # forward the model to get the logits for the index in the sequence
-            print(idx_cond.shape)
+            #print(idx_cond.shape)
             if not generation_stage:
                 logits = self(idx_cond, past_list)
                 generation_stage = True
             else:
                 logits = self(idx_cond[:, -1:, :], past_list)
-            print("logit shape: ", logits.shape)
+            #print("logit shape: ", logits.shape)
             # pluck the logits at the final step and scale by desired temperature
             t0 = time.time()
             comm0 = comm.get().get_communication_stats()
@@ -126,6 +129,10 @@ class gptEmbeddings(cnn.Module):
         self.config = config
         self.timing = timing
 
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
+    
     def cuda(self, device=None):
         super(gptEmbeddings, self).cuda(device=device)
 
@@ -167,7 +174,7 @@ class gptEmbeddings(cnn.Module):
         self.timing["EmbedTime"] += (t1-t0)
         self.timing["EmbedCommTime"] += (comm1["time"] - comm0["time"])
         self.timing["ËmbedCommByte"] += (comm1["bytes"] - comm0["bytes"])
-        print("benchmarking embed: ", input_ids.shape, t1-t0)
+        #print("benchmarking embed: ", input_ids.shape, t1-t0)
 
         position_embeddings = (self.wpe.weight[:,:input_ids.shape[1]]).transpose(0,1)
      #   print(position_embeddings.shape, self.position_embeddings.weight.shape)
@@ -196,6 +203,11 @@ class gptLayer(cnn.Module):
         self.intermediate = gptIntermediate(config, timing)
         self.output = gptOutput(config, timing)
         self.config = config
+        self.timing = timing
+ 
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
  
     def forward(self, hidden_states, past):
         #attention_output, past = self.attention(hidden_states, past)
@@ -211,6 +223,10 @@ class gptAttention(cnn.Module):
         super(gptAttention, self).__init__()
         self.self = gptSelfAttention(config, timing)
         self.output = gptSelfOutput(config, timing)
+    
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
     
     def forward(self, hidden_states, past):
         #self_output, past = self.self(hidden_states, past)
@@ -245,6 +261,10 @@ class gptSelfAttention(cnn.Module):
         else:
             raise ValueError(f"softmax type {config.softmax_act} not implemented.")
         self.timing = timing
+    
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
 
     def transpose_for_scores(self, x):
         new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
@@ -284,6 +304,7 @@ class gptSelfAttention(cnn.Module):
         
         t0 = time.time()
         comm0 = comm.get().get_communication_stats()
+        #print("smax operands: ", attention_scores.shape)
         attention_probs = self.smax(attention_scores)
         t1 = time.time()
         comm1 = comm.get().get_communication_stats()
@@ -306,7 +327,7 @@ class gptSelfAttention(cnn.Module):
         new_context_layer_shape = context_layer.size()[:-2] + (self.hidden_size,)
         context_layer = context_layer.reshape(new_context_layer_shape)
 
-        print("debug shapes after attention: ", context_layer.shape, key_layer.shape, value_layer.shape)        
+        #print("debug shapes after attention: ", context_layer.shape, key_layer.shape, value_layer.shape)        
         return context_layer#, (key_layer, value_layer)
 
 class gptSelfOutput(cnn.Module):
@@ -318,6 +339,10 @@ class gptSelfOutput(cnn.Module):
         self.dropout = cnn.Dropout(config.hidden_dropout_prob)
         self.timing = timing
         self.config = config
+    
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
 
     def forward(self, hidden_states, input_tensor):
         t0 = time.time()
@@ -358,6 +383,10 @@ class gptIntermediate(cnn.Module):
             raise ValueError(f"activation type {config.hidden_act} not implemented")
         self.timing = timing
 
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
+    
     def forward(self, hidden_states):
         t0 = time.time()
         comm0 = comm.get().get_communication_stats()
@@ -388,6 +417,10 @@ class gptOutput(cnn.Module):
         self.dropout = cnn.Dropout(config.hidden_dropout_prob)
         self.timing = timing
         self.config = config
+    
+    def reset_timing(self):
+        for k,v in self.timing.items():
+            self.timing[k] = 0
 
     def forward(self, hidden_states, input_tensor):
         t0 = time.time()
