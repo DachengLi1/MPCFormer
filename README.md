@@ -1,4 +1,4 @@
-# MPCFormer
+# MPCFormer: fast, performant, and private transformer inference with MPC.
 [**Paper**](https://arxiv.org/pdf/2211.01452.pdf) | 
 [**Usage**](#usage) |
 [**Citation**](#citation) |
@@ -23,7 +23,9 @@ To install necessary packages, install the transformer directory in editor mode:
     pip install -e .
 
 #### Obtain a teacher Transformer model by fine-tuning on downstream tasks 
-(we support GLUE/Imdb, other datasets can be easily supported via the ransformers library), and (Optional) evaluate baselines in the paper [**Here**](src/baselines).
+We support GLUE and Imdb, other datasets can be easily supported via the ransformers library
+
+#### (Optional) evaluate baselines in the paper [**Here**](src/baselines).
 
 #### After obtaining a teacher Transformer model, perform approximation and distillation to get the output of MPCFormer [**Here**](src/main).
 
