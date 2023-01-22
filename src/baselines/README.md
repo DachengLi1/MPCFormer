@@ -1,8 +1,4 @@
-This directory supports two use cases. To install necessary packages, install the outmost directory in editor mode:
-    
-    git clone https://github.com/MccRee177/MPCFormer
-    cd MPCFormer/transformers
-    pip install -e .
+This directory supports two use cases.
 
 #### (1) Train teacher models by fine-tuning and grid search according to the original Bert/Roberta paper.
 This requires three arguments: task_name is the dataset name in the GLUE benchmark, metric_name is the metric name for the task:
