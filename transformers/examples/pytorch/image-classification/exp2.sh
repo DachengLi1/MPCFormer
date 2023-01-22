@@ -1,0 +1,20 @@
+CUDA_VISIBLE_DEVICES=1,2,3,4 python run_image_classification.py \
+    --dataset_name cifar10 \
+    --model_name_or_path WinKawaks/vit-small-patch16-224 \
+    --output_dir ./cifar10_outputs_quad/ \
+    --remove_unused_columns False \
+    --do_train \
+    --do_eval \
+    --learning_rate 1e-4 \
+    --num_train_epochs 50 \
+    --per_device_train_batch_size 64 \
+    --fp16 \
+    --per_device_eval_batch_size 32 \
+    --logging_strategy steps \
+    --logging_steps 10 \
+    --evaluation_strategy epoch \
+    --save_strategy epoch \
+    --load_best_model_at_end True \
+    --save_total_limit 3 \
+    --act quad \
+    --overwrite_output_dir

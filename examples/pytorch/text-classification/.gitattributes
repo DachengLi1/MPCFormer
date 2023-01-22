@@ -1,5 +1,0 @@
-checkpoints/S0 filter=lfs diff=lfs merge=lfs -text
-checkpoints/S1 filter=lfs diff=lfs merge=lfs -text
-checkpoints/S2 filter=lfs diff=lfs merge=lfs -text
-checkpoints/exp filter=lfs diff=lfs merge=lfs -text
-*.bin filter=lfs diff=lfs merge=lfs -text

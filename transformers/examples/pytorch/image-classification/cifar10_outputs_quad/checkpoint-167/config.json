@@ -1,0 +1,50 @@
+{
+  "_name_or_path": "WinKawaks/vit-small-patch16-224",
+  "architectures": [
+    "ViTForImageClassification"
+  ],
+  "attention_probs_dropout_prob": 0.0,
+  "encoder_stride": 16,
+  "finetuning_task": "image-classification",
+  "hidden_act": "quad",
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 384,
+  "id2label": {
+    "0": "airplane",
+    "1": "automobile",
+    "2": "bird",
+    "3": "cat",
+    "4": "deer",
+    "5": "dog",
+    "6": "frog",
+    "7": "horse",
+    "8": "ship",
+    "9": "truck"
+  },
+  "image_size": 224,
+  "initializer_range": 0.02,
+  "intermediate_size": 1536,
+  "label2id": {
+    "airplane": "0",
+    "automobile": "1",
+    "bird": "2",
+    "cat": "3",
+    "deer": "4",
+    "dog": "5",
+    "frog": "6",
+    "horse": "7",
+    "ship": "8",
+    "truck": "9"
+  },
+  "layer_norm_eps": 1e-12,
+  "model_type": "vit",
+  "num_attention_heads": 6,
+  "num_channels": 3,
+  "num_hidden_layers": 12,
+  "patch_size": 16,
+  "problem_type": "single_label_classification",
+  "qkv_bias": true,
+  "softmax_act": "softmax",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.0.dev0"
+}
