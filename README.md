@@ -22,10 +22,10 @@ To install necessary packages, install the transformer directory in editor mode:
     cd MPCFormer/transformers
     pip install -e .
 
-#### Obtain a teacher Transformer model by fine-tuning on downstream tasks [**Here**](src/baselines)
+#### Step 1: Obtain a teacher Transformer model by fine-tuning on downstream tasks [**Here**](src/baselines)
 We support GLUE and Imdb, other datasets can be easily supported via the ransformers library.
 
-#### After obtaining a teacher Transformer model, perform approximation and distillation to get the output of MPCFormer [**Here**](src/main).
+#### Step 2: perform approximation and distillation of MPCFormer [**Here**](src/main).
 
 #### (Optional) evaluate baselines in the paper [**Here**](src/baselines).
 
