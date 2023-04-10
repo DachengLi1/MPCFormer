@@ -2,6 +2,7 @@
 [**Paper**](https://arxiv.org/pdf/2211.01452.pdf) | 
 [**Usage**](#usage) |
 [**Citation**](#citation) |
+[**Video**](https://recorder-v3.slideslive.com/?share=81100&s=69c62c48-1730-4eb9-84ae-586fa4ff937d) |
 
 This repository contains the official code for our ICLR 2023 spotlight paper MPCFormer: fast, performant, and private transformer inference with MPC.
 We design MPCFormer to protect users' data privacy by using Secure Multiparty Computation(MPC). It also meets other real-world requirements:
