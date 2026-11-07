@@ -57,7 +57,7 @@ logger = logging.getLogger()
 oncloud = True
 try:
     import moxing as mox
-except:
+except ImportError:
     oncloud = False
 
 
